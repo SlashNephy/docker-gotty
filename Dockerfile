@@ -11,7 +11,7 @@ RUN go get github.com/jteeuwen/go-bindata/... \
     && make \
     && mv gotty /
 
-FROM docker
+FROM docker:20.10.8
 
 COPY --from=build /gotty /gotty
 
